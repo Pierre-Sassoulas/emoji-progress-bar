@@ -1,0 +1,22 @@
+version: 2
+updates:
+  # Low-activity project: check monthly (the least frequent interval
+  # dependabot supports -- there is no yearly option) with a long cooldown
+  # so freshly published versions are given time to prove themselves.
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 10
+    rebase-strategy: "disabled"
+    cooldown:
+      default-days: 30
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 10
+    rebase-strategy: "disabled"
+    cooldown:
+      default-days: 30
