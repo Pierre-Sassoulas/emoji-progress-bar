@@ -1,0 +1,37 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [ "setuptools>=64", "setuptools-scm>=8" ]
+
+[project]
+name = "emoji-progress-bar"
+description = ""
+readme = "README.md"
+authors = [ { name = "Pierre Sassoulas", email = "pierre.sassoulas@gmail.com" } ]
+requires-python = ">=3.8"
+classifiers = [
+  "Intended Audience :: Developers",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+]
+dynamic = [ "version" ]
+
+urls.Homepage = "https://github.com/Pierre-Sassoulas/emoji-progress-bar"
+
+optional-dependencies.test = [
+  "coverage",
+  "coveralls",
+  "pre-commit",
+  "pylint",
+  "pytest-cov",
+  "python-coveralls",
+]
+
+[tool.setuptools.packages.find]
+include = [ "emoji_progress_bar*" ]
+
+[tool.setuptools_scm]
